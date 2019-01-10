@@ -86,10 +86,12 @@ public class Preguntas extends AppCompatActivity {
 
         //valido si es el inicio o final para mostrar las preguntas correctas
         if (!Conectar.banderaformulario) {
-            Actividad.yasehizo = true;//cuando se lo hace por primera vez, ya no presenta el formulario interfiere cuando se presiona el boton para pausar cronometro
+            //Actividad.yasehizo = true;//cuando se lo hace por primera vez, ya no presenta el formulario interfiere cuando se presiona el boton para pausar cronometro
+            Distancia.yasehizo = true;//cuando se lo hace por primera vez, ya no presenta el formulario interfiere cuando se presiona el boton para pausar cronometro
             Conectar.banderaformulario = true;//para ver si se presentan las preguntas iniciales o finales
         } else {
-            Actividad.yasehizo = false;
+           // Actividad.yasehizo = false;
+             Distancia.yasehizo = false;
             Conectar.banderaformulario = false;
         }
 
@@ -109,7 +111,9 @@ public class Preguntas extends AppCompatActivity {
                         startActivity(salir);
                         finish();
                     } else {
-                        Intent salir = new Intent(Preguntas.this, Actividad.class);
+//                        Intent salir = new Intent(Preguntas.this, Actividad.class);
+                        Intent salir = new Intent(Preguntas.this, Distancia.class);
+
                         startActivity(salir);
                         finish();
                     }

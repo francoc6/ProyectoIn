@@ -74,7 +74,6 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               //  sp.edit().putBoolean("logged", false).apply();
-               // Intent salir = new Intent(Menu.this, MainActivity.class);
                 Intent salir = new Intent(Menu.this, CuestDiab.class);
                 startActivity(salir);
                 finish();//evito que regresen al presionar el boto del celular
@@ -117,7 +116,8 @@ public class Menu extends AppCompatActivity {
         if(!checkLocation()){
             return;
         }else{
-            Intent op = new Intent(Menu.this,Actividad.class);
+            //Intent op = new Intent(Menu.this,Actividad.class);
+            Intent op = new Intent(Menu.this,Distancia.class);
             startActivity(op);
             finish();
         }
